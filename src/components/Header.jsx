@@ -3,8 +3,8 @@ import { Flex, Image, Button, Spacer, Divider } from "@chakra-ui/react";
 
 export default function Header() {
   return (
-    <Flex bg='#fff' h='4rem' p="0 10rem" gap='1.5rem' align='center'>
-      <Image src="./logo.svg" alt="" w="120px" mr='2rem' />
+    <Flex bg='#fff' h='4rem' p="0 12%" gap='1.25rem' align='center'>
+      <Image src="./logo.svg" alt="" w="120px" mr='1rem' />
       <HeaderButton name="Quem somos" />
       <HeaderButton name="Quero adotar" />
       <HeaderButton name="Quero ajudar" />
