@@ -4,7 +4,7 @@ export default function MainPageSection2() {
   return (
     <Flex as='section' bg='#f3f4f6' p='4rem 0'>
       <Flex bg='#F5DAC2' h='26rem' w='100%' p='14%' justify='center' align='center'>
-        <Flex align='center' justify='center' border='1px' borderColor='#004569' borderRadius='3px' bg='' h='27rem' w='42%' p='0 0.75rem'>
+        <Flex align='center' justify='center' border='1px' borderColor={'brand.blue'} borderRadius='3px' bg='' h='27rem' w='42%' p='0 0.75rem'>
           <Image src='./images/depoimento.png' alt='' w='95%'/>
         </Flex>
       <Spacer />

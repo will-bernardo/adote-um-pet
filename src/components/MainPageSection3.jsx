@@ -50,9 +50,9 @@ export default function MainPageSection3(){
   return (
     <Flex as='section' align='center' bg='#f3f4f6' gap='2rem' p='2rem 14%' flexDir='column' >
       <Flex w='100%'>
-        <Heading fontWeight='semibold' mb='1rem' w='100%' fontSize='26pt' color='#004569'>Encontre seu novo amigo</Heading>
+        <Heading fontWeight='semibold' mb='1rem' w='100%' fontSize='26pt' color={'brand.blue'}>Encontre seu novo amigo</Heading>
         <Spacer />
-        <Button mr='1.25rem' colorScheme='facebook' variant='outline' borderColor='#FA973B'>Filtrar</Button>
+        <Button mr='1.25rem' colorScheme='facebook' variant='outline' borderColor={'brand.orange'}>Filtrar</Button>
         </Flex>
       <Flex gap='2rem' align='center' justify='center'>
       <IconButton bg='none' aria-label="" icon={<ChevronLeftIcon h='5rem' w='5rem' />} w='3rem' h='4rem' />

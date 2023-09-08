@@ -2,7 +2,7 @@ import { Flex, Link, Heading, Image } from "@chakra-ui/react";
 
 export default function Footer(){
   return (
-    <Flex flexDir='column' bg='#004569' h='23rem' color='#fff' px='12%' py='3rem'>
+    <Flex flexDir='column' bg={'brand.blue'} h='23rem' color={'brand.white'} px='12%' py='3rem'>
       <Flex justify='space-between' >   
         <Flex flexDir='column' gap='3px'>
           <Heading as='h3' fontSize='13pt' fontWeight='500'>ADOTE</Heading>
