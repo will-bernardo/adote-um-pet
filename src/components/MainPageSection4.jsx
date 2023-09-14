@@ -10,11 +10,7 @@ export default function MainPageSection2() {
       <Spacer />
         <Flex align='center' flexDir='column' gap='0.25rem' w='54%'>
           <Flex alignSelf='end' >
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
+            <Stars />
             </Flex>
           <Image alignSelf='start' src='./open-quote.svg' alt='' w='2rem' />
           <Text textAlign='center' w='94%' fontSize='18pt' color='#2a2a2a'>
@@ -31,8 +27,14 @@ export default function MainPageSection2() {
   )
 }
 
-function Star() {
+function Stars() {
   return (
-    <Image src='./star.svg' alt='' />
+    <Flex>  
+      <Image src='./star.svg' alt='' />
+      <Image src='./star.svg' alt='' />
+      <Image src='./star.svg' alt='' />
+      <Image src='./star.svg' alt='' />
+      <Image src='./star.svg' alt='' />
+    </Flex>
   )
 }
