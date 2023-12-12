@@ -46,7 +46,7 @@ export default function MainPageSection3() {
     },
     {
       key: 5,
-      img: './images/gato2.png',
+      img: './images/cachorro.png',
       name: 'Lupin',
       sex: 'Macho',
       situation: 'Resgatado',
@@ -56,7 +56,7 @@ export default function MainPageSection3() {
     },
     {
       key: 6,
-      img: './images/gato2.png',
+      img: './images/gato1.png',
       name: 'Lupin',
       sex: 'Macho',
       situation: 'Resgatado',
@@ -66,7 +66,7 @@ export default function MainPageSection3() {
     },
     {
       key: 7,
-      img: './images/gato2.png',
+      img: './images/cachorro2.png',
       name: 'Lupin',
       sex: 'Macho',
       situation: 'Resgatado',
@@ -76,7 +76,7 @@ export default function MainPageSection3() {
     },
     {
       key: 8,
-      img: './images/gato2.png',
+      img: './images/gato1.png',
       name: 'Lupin',
       sex: 'Macho',
       situation: 'Resgatado',
