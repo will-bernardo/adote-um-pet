@@ -1,8 +1,7 @@
-import { Spacer, Button, Flex, Heading, IconButton } from "@chakra-ui/react";
-import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons'
-import CardSelectPet from "./CardSelectPet"
+import { Flex } from "@chakra-ui/react";
+import PetCarousel from "./PetCarousel";
 
-export default function MainPageSection3(){
+export default function MainPageSection3() {
 
   const pets = [
     {
@@ -36,7 +35,47 @@ export default function MainPageSection3(){
       condition: 'Filhote encontrado na rua.'
     },
     {
-      key:4,
+      key: 4,
+      img: './images/gato2.png',
+      name: 'Lupin',
+      sex: 'Macho',
+      situation: 'Resgatado',
+      type: 'Felino',
+      age: '6 meses',
+      condition: 'Filhote encontrado na rua.'
+    },
+    {
+      key: 5,
+      img: './images/gato2.png',
+      name: 'Lupin',
+      sex: 'Macho',
+      situation: 'Resgatado',
+      type: 'Felino',
+      age: '6 meses',
+      condition: 'Filhote encontrado na rua.'
+    },
+    {
+      key: 6,
+      img: './images/gato2.png',
+      name: 'Lupin',
+      sex: 'Macho',
+      situation: 'Resgatado',
+      type: 'Felino',
+      age: '6 meses',
+      condition: 'Filhote encontrado na rua.'
+    },
+    {
+      key: 7,
+      img: './images/gato2.png',
+      name: 'Lupin',
+      sex: 'Macho',
+      situation: 'Resgatado',
+      type: 'Felino',
+      age: '6 meses',
+      condition: 'Filhote encontrado na rua.'
+    },
+    {
+      key: 8,
       img: './images/gato2.png',
       name: 'Lupin',
       sex: 'Macho',
@@ -45,27 +84,13 @@ export default function MainPageSection3(){
       age: '6 meses',
       condition: 'Filhote encontrado na rua.'
     }
+
+
   ]
 
   return (
-    <Flex as='section' align='center' bg='#f3f4f6' gap='2rem' p='2rem 14%' flexDir='column' >
-      <Flex w='100%'>
-        <Heading fontWeight='semibold' mb='1rem' w='100%' fontSize='26pt' color='#004569'>Encontre seu novo amigo</Heading>
-        <Spacer />
-        <Button mr='1.25rem' colorScheme='facebook' variant='outline' borderColor='#FA973B'>Filtrar</Button>
-        </Flex>
-      <Flex gap='2rem' align='center' justify='center'>
-      <IconButton bg='none' aria-label="" icon={<ChevronLeftIcon h='5rem' w='5rem' />} w='3rem' h='4rem' />
-        <Spacer />
-          
-          {pets.map((pet) => 
-            <CardSelectPet key={pet.name} pet={pet}/>
-          )}
-
-        <Spacer />
-        <IconButton bg='none' aria-label="" icon={<ChevronRightIcon h='5rem' w='5rem' />} w='3rem' h='4rem' />
-      </Flex>
-      <Button colorScheme='facebook' variant='solid' w='fit-content'>Ver mais</Button>
+    <Flex bg='#f3f4f6' justify='center'>
+      <PetCarousel pets={pets} />
     </Flex>
   )
 }
