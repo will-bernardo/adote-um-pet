@@ -8,14 +8,12 @@ import Footer from "../components/Footer";
 
 export default function MainPage() {
   return (
-    <div>
-      <Header />
+    <>
       <MainPageSection1 />
       <MainPageSection2 />
       <MainPageSection3 />
       <MainPageSection4 />
-      <Footer />
-    </div>
-    
+    </>
+
   )
 }

@@ -1,11 +1,14 @@
 /* eslint-disable react/prop-types */
 import { Flex, Image, Button, Spacer, Divider } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <Flex justify='center'>
       <Flex as='header' bg='#fff' h='4rem' w='61rem' justify='center' gap='1.25rem' align='center'>
-        <Image src="./logo.svg" alt="" w="120px" mr='1rem' />
+        <Link to={`home`}>
+          <Image src="./logo.svg" alt="" w="120px" mr='1rem' />
+        </Link>
         <HeaderButton name="Quem somos" />
         <HeaderButton name="Quero adotar" />
         <HeaderButton name="Quero ajudar" />
