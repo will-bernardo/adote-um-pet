@@ -90,7 +90,13 @@ export default function MainPageSection3() {
 
   return (
     <Flex bg='#f3f4f6' justify='center'>
-      <PetCarousel pets={pets} />
+      <PetCarousel
+        pets={pets}
+        numCards={4}
+        filterBtn={true}
+        seeMoreBtn={true}
+        title={"Encontre seu novo amigo"}
+      />
     </Flex>
   )
 }

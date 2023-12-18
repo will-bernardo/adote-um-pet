@@ -1,21 +1,24 @@
 import { Flex, Heading, Button, IconButton, Spacer, Box } from '@chakra-ui/react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import { CaretLeft, CaretRight } from '@phosphor-icons/react'
 import CardSelectPet from './CardSelectPet'
 import { useRef } from 'react'
 
 
-export default function PetCarousel({ pets }) {
+export default function PetCarousel({ pets, numCards, title, seeMoreBtn, filterBtn }) {
+  const cardCount = numCards * 215
+
   const carousel = useRef(null)
 
   function handleLeftClick(e) {
     e.preventDefault()
-    const movementSize = carousel.current.offsetWidth / 4
+    const movementSize = carousel.current.offsetWidth / numCards
     carousel.current.scrollLeft -= movementSize
   }
 
   function handleRightClick(e) {
     e.preventDefault()
-    const movementSize = carousel.current.offsetWidth / 4
+    const movementSize = carousel.current.offsetWidth / numCards
     carousel.current.scrollLeft += movementSize
   }
 
@@ -23,29 +26,29 @@ export default function PetCarousel({ pets }) {
   return (
     <Flex flexDirection='column' align='center' gap='2rem'>
       <Flex w='81%' justify='space-between'>
-        <Heading fontWeight='semibold' w='100%' fontSize='26pt' color='#004569'>Encontre seu novo amigo</Heading>
-        <Button colorScheme='facebook' variant='outline' borderColor='#FA973B'>Filtrar</Button>
+        <Heading fontWeight='semibold' w='100%' fontSize='26pt' color='#004569'>{title}</Heading>
+        {filterBtn ? <Button colorScheme='facebook' variant='outline' borderColor='#FA973B'>Filtrar</Button> : null}
       </Flex>
       <Flex gap='2rem' w='100%' align='center' justify='center'>
 
-        <IconButton bg='none' aria-label="" icon={<ChevronLeftIcon h='5rem' w='5rem' />} w='3rem' h='4rem'
-          onClick={handleLeftClick}
-        />
+
+        <Button px='0' py='8' bg='none' _hover={{ backgroundColor: '#FFFFFF60' }} onClick={handleLeftClick}>
+          <CaretLeft size={50} />
+        </Button>
         <Spacer />
-        <Flex gap='2' boxSizing='border-box' scrollBehavior='smooth' w='860px' overflow='hidden'
+        <Flex gap='2' boxSizing='border-box' scrollBehavior='smooth' w={cardCount} overflow='hidden'
           ref={carousel}
         >
           {pets.map((pet) =>
             <CardSelectPet key={pet.id} pet={pet} />
           )}
         </Flex>
-
         <Spacer />
-        <IconButton bg='none' aria-label="" icon={<ChevronRightIcon h='5rem' w='5rem' />} w='3rem' h='4rem'
-          onClick={handleRightClick}
-        />
+        <Button px='0' py='8' bg='none' _hover={{ backgroundColor: '#FFFFFF60' }} onClick={handleRightClick}>
+          <CaretRight size={50} />
+        </Button>
       </Flex>
-      <Button colorScheme='facebook' variant='solid' w='fit-content'>Ver mais</Button>
+      {seeMoreBtn ? <Button colorScheme='facebook' variant='solid' w='fit-content'>Ver mais</Button> : null}
     </Flex>
   )
 }

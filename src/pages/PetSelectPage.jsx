@@ -1,5 +1,4 @@
-import { Flex, Box, IconButton, Text, List, ListItem, Image, Button } from "@chakra-ui/react";
-import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import { Flex, Box, Text, List, ListItem, Image, Button } from "@chakra-ui/react";
 import { CaretLeft, CaretRight } from '@phosphor-icons/react'
 
 

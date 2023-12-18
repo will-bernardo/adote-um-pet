@@ -14,7 +14,7 @@ export default function Header() {
         gap="1.25rem"
         align="center"
       >
-        <Link to={`home`}>
+        <Link to={`/`}>
           <Image src="./logo.svg" alt="" w="120px" mr="1rem" />
         </Link>
         <HeaderButton name="Quem somos" />
