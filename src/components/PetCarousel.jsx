@@ -1,13 +1,11 @@
-import { Flex, Heading, Button, IconButton, Spacer, Box } from '@chakra-ui/react'
-import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import { Flex, Heading, Button, Spacer } from '@chakra-ui/react'
 import { CaretLeft, CaretRight } from '@phosphor-icons/react'
 import CardSelectPet from './CardSelectPet'
 import { useRef } from 'react'
 
 
 export default function PetCarousel({ pets, numCards, title, seeMoreBtn, filterBtn }) {
-  const cardCount = numCards * 215
-
+  const cardCount = numCards * 192
   const carousel = useRef(null)
 
   function handleLeftClick(e) {
@@ -26,7 +24,7 @@ export default function PetCarousel({ pets, numCards, title, seeMoreBtn, filterB
   return (
     <Flex flexDirection='column' align='center' gap='2rem'>
       <Flex w='81%' justify='space-between'>
-        <Heading fontWeight='semibold' w='100%' fontSize='26pt' color='#004569'>{title}</Heading>
+        <Heading fontWeight='normal' w='100%' fontSize='26pt' color='#004569'>{title}</Heading>
         {filterBtn ? <Button colorScheme='facebook' variant='outline' borderColor='#FA973B'>Filtrar</Button> : null}
       </Flex>
       <Flex gap='2rem' w='100%' align='center' justify='center'>
@@ -36,11 +34,11 @@ export default function PetCarousel({ pets, numCards, title, seeMoreBtn, filterB
           <CaretLeft size={50} />
         </Button>
         <Spacer />
-        <Flex gap='2' boxSizing='border-box' scrollBehavior='smooth' w={cardCount} overflow='hidden'
+        <Flex gap='4' py='2' px='2' boxSizing='border-box' scrollBehavior='smooth' w={cardCount} overflow='hidden'
           ref={carousel}
         >
           {pets.map((pet) =>
-            <CardSelectPet key={pet.id} pet={pet} />
+            <CardSelectPet key={pet.id} pet={pet} link={`/pet/${pet.id}`} />
           )}
         </Flex>
         <Spacer />

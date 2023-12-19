@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "img": "/images/cachorro2.png",
+    "name": "Thor",
+    "sex": "Macho",
+    "situation": "Resgatado",
+    "type": "Canino",
+    "age": "3 anos",
+    "condition": "Pata esquerda traseira amputada."
+  },
+  {
+    "id": 2,
+    "img": "/images/cachorro.png",
+    "name": "Toby",
+    "sex": "Macho",
+    "situation": "Resgatado",
+    "type": "Canino",
+    "age": "7 meses",
+    "condition": "Filhote encontrado na rua."
+  },
+  {
+    "id": 3,
+    "img": "/images/gato1.png",
+    "name": "Bibi",
+    "sex": "Fêmea",
+    "situation": "Resgatada",
+    "type": "Felino",
+    "age": "5 meses",
+    "condition": "Filhote encontrado na rua."
+  },
+  {
+    "id": 4,
+    "img": "/images/gato2.png",
+    "name": "Lupin",
+    "sex": "Macho",
+    "situation": "Resgatado",
+    "type": "Felino",
+    "age": "6 meses",
+    "condition": "Filhote encontrado na rua."
+  },
+  {
+    "id": 5,
+    "img": "/images/cachorro.png",
+    "name": "Lupin",
+    "sex": "Macho",
+    "situation": "Resgatado",
+    "type": "Felino",
+    "age": "6 meses",
+    "condition": "Filhote encontrado na rua."
+  },
+  {
+    "id": 6,
+    "img": "/images/gato1.png",
+    "name": "Lupin",
+    "sex": "Macho",
+    "situation": "Resgatado",
+    "type": "Felino",
+    "age": "6 meses",
+    "condition": "Filhote encontrado na rua."
+  },
+  {
+    "id": 7,
+    "img": "/images/cachorro2.png",
+    "name": "Lupin",
+    "sex": "Macho",
+    "situation": "Resgatado",
+    "type": "Felino",
+    "age": "6 meses",
+    "condition": "Filhote encontrado na rua."
+  },
+  {
+    "id": 8,
+    "img": "/images/gato1.png",
+    "name": "Lupin",
+    "sex": "Macho",
+    "situation": "Resgatado",
+    "type": "Felino",
+    "age": "6 meses",
+    "condition": "Filhote encontrado na rua."
+  }
+]

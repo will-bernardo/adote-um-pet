@@ -26,6 +26,10 @@ const router = createBrowserRouter([
         element: <PetSelectPage />,
       },
       {
+        path: "/pet/:id",
+        element: <PetSelectPage />
+      },
+      {
         path: "/login",
         element: <LoginPage />,
       },

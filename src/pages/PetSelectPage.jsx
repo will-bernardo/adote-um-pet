@@ -1,8 +1,28 @@
 import { Flex, Box, Text, List, ListItem, Image, Button } from "@chakra-ui/react";
 import { CaretLeft, CaretRight } from '@phosphor-icons/react'
-
+import PetCarousel from "../components/PetCarousel";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 export default function PetSelectPage() {
+  const { id } = useParams()
+  const [pets, setPets] = useState([])
+  const [curPet, setCurPet] = useState({})
+
+
+  useEffect(() => {
+    async function getPetsData() {
+      const response = await fetch('http://localhost:5173/src/petdata.json')
+      const data = await response.json()
+      console.log(data)
+      setPets(data)
+    }
+
+    getPetsData()
+
+  }, [])
+
+
   return (
     <>
       <Flex bg='#F3F4F6' py='3rem'>
@@ -18,7 +38,7 @@ export default function PetSelectPage() {
             </Button>
           </Flex>
           <Flex flexDir='column' color='#004569' gap='3rem'>
-            <Text fontSize='2xl' fontWeight='bold'>Nome_do_Pet</Text>
+            <Text fontSize='2xl' fontWeight='bold'>{`Nome do Pet ${id}`}</Text>
             <List color='#6B7280'>
               <ListItem>Info 1</ListItem>
               <ListItem>Info 2</ListItem>
@@ -40,6 +60,17 @@ export default function PetSelectPage() {
           </Flex>
         </Flex>
       </Flex>
+
+      <Flex bg='#f3f4f6' pt='10' pb='20' justify='center'>
+        <PetCarousel
+          pets={pets}
+          numCards={5}
+          filterBtn={false}
+          seeMoreBtn={false}
+          title={"PETS mais próximos de você"}
+        />
+      </Flex>
+
     </>
   )
 }

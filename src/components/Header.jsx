@@ -15,7 +15,7 @@ export default function Header() {
         align="center"
       >
         <Link to={`/`}>
-          <Image src="./logo.svg" alt="" w="120px" mr="1rem" />
+          <Image src="/logo.svg" alt="" w="120px" mr="1rem" />
         </Link>
         <HeaderButton name="Quem somos" />
         <HeaderButton name="Quero adotar" />
