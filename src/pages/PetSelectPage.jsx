@@ -9,18 +9,30 @@ export default function PetSelectPage() {
   const [pets, setPets] = useState([])
   const [curPet, setCurPet] = useState({})
 
+  function getPet(data) {
+    const petdata = data.find((pet) => {
+      return pet.id === Number(id)
+    })
+    console.log('data recebido', data)
+    console.log('founded', petdata)
+    setCurPet(petdata)
+  }
 
   useEffect(() => {
     async function getPetsData() {
       const response = await fetch('http://localhost:5173/src/petdata.json')
       const data = await response.json()
       console.log(data)
-      setPets(data)
+
+      if (data) {
+        setPets(data)
+        getPet(data)
+      }
     }
 
     getPetsData()
 
-  }, [])
+  }, [id])
 
 
   return (
@@ -38,7 +50,7 @@ export default function PetSelectPage() {
             </Button>
           </Flex>
           <Flex flexDir='column' color='#004569' gap='3rem'>
-            <Text fontSize='2xl' fontWeight='bold'>{`Nome do Pet ${id}`}</Text>
+            <Text fontSize='2xl' fontWeight='bold'>{curPet.name}</Text>
             <List color='#6B7280'>
               <ListItem>Info 1</ListItem>
               <ListItem>Info 2</ListItem>

@@ -1,8 +1,15 @@
 /* eslint-disable react/prop-types */
 import { Flex, Image, Button, Spacer, Divider } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   return (
     <Flex justify="center">
       <Flex
