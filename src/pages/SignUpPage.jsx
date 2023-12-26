@@ -15,6 +15,7 @@ import {
   FormErrorMessage,
   Input,
   Text,
+  Fade,
 } from "@chakra-ui/react";
 import { useEffect, useRef, useState } from "react";
 import { supabase } from "../lib/supabaseClient";
@@ -88,6 +89,7 @@ export default function SignUpPage() {
 
   return (
     <>
+    <Fade in={true}>
       <Flex
         gap={"40px"}
         flexDir={"column"}
@@ -241,6 +243,7 @@ export default function SignUpPage() {
           </Alert>
         </AlertDialogContent>
       </AlertDialog>
+      </Fade>
     </>
   );
 }

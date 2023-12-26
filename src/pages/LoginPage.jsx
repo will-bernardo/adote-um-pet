@@ -1,7 +1,9 @@
-import { Button, Checkbox, Flex, Input, Text } from "@chakra-ui/react";
+import { Button, Checkbox, Flex, Input, Text, Fade } from "@chakra-ui/react";
+import { Link } from 'react-router-dom'
 
 export default function LoginPage() {
   return (
+    <Fade in={true}>
     <Flex gap={'40px'} flexDir={"column"} alignItems={"center"} bg={"brand.beige"} h={'xl'} mt={'3.75rem'}>
       <Text fontSize={"4xl"} color={"brand.blue"} mt={'3.75rem'}>
         Bem-vindo ao #AdoteumPet
@@ -49,15 +51,19 @@ export default function LoginPage() {
           >
             Criar conta ONG
           </Button>
+          <Link to='/signup'>
           <Button
+            w={"100%"}
             variant={"outline"}
             color={"brand.blue"}
             borderColor={"brand.blue"}
-          >
+            >
             Criar conta Tutor
           </Button>
+            </Link>
         </Flex>
       </Flex>
     </Flex>
+    </Fade>
   );
 }

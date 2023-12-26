@@ -1,16 +1,18 @@
-import { useRouteError } from "react-router-dom";
+import { Fade } from "@chakra-ui/react";
+import { useState } from "react";
 
 export default function ErrorPage() {
-  const error = useRouteError();
-  console.error(error);
+  const [fade, setFade] = useState(true)
 
   return (
-    <div id="error-page">
+    <Fade in={true}>
+    <div>
       <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
+      <p>Página não encontrada</p>
       <p>
-        <i>{error.statusText || error.message}</i>
+        <i>404</i>
       </p>
     </div>
+    </Fade>
   );
 }

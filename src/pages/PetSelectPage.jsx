@@ -1,4 +1,4 @@
-import { Flex, Box, Text, List, ListItem, Image, Button } from "@chakra-ui/react";
+import { Flex, Box, Text, List, ListItem, Image, Button, Fade } from "@chakra-ui/react";
 import { CaretLeft, CaretRight } from '@phosphor-icons/react'
 import PetCarousel from "../components/PetCarousel";
 import { useState, useEffect } from "react";
@@ -37,6 +37,7 @@ export default function PetSelectPage() {
 
   return (
     <>
+      <Fade in={true}>
       <Flex bg='#F3F4F6' py='3rem'>
         <Flex bg='#F5DAC2' gap='3rem' align='center' py='3rem' w='100%' justify='center'>
           <Flex align='center' gap='3rem'>
@@ -82,7 +83,7 @@ export default function PetSelectPage() {
           title={"PETS mais próximos de você"}
         />
       </Flex>
-
+     </Fade>
     </>
   )
 }

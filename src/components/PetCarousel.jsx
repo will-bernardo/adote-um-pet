@@ -3,7 +3,6 @@ import { CaretLeft, CaretRight } from '@phosphor-icons/react'
 import CardSelectPet from './CardSelectPet'
 import { useRef } from 'react'
 
-
 export default function PetCarousel({ pets, numCards, title, seeMoreBtn, filterBtn }) {
   const cardCount = numCards * 192
   const carousel = useRef(null)
@@ -19,7 +18,6 @@ export default function PetCarousel({ pets, numCards, title, seeMoreBtn, filterB
     const movementSize = carousel.current.offsetWidth / numCards
     carousel.current.scrollLeft += movementSize
   }
-
 
   return (
     <Flex flexDirection='column' align='center' gap='2rem'>
